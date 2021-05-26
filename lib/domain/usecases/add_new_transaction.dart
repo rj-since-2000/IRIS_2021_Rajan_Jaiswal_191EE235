@@ -1,5 +1,5 @@
 import 'package:expensetracker/domain/entities/transaction.dart';
-import 'package:expensetracker/domain/repositories/transaction.dart';
+import 'package:expensetracker/domain/repositories/transaction_repository.dart';
 import 'package:flutter/material.dart';
 
 class AddNewTransaction {

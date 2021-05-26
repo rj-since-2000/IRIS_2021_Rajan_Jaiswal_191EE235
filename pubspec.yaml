@@ -31,14 +31,11 @@ dependencies:
   equatable: ^0.4.0
   # Functional programming thingies
   dartz: ^0.8.6
-  # Remote API
-  connectivity: ^0.4.3+7
-  http: ^0.12.0+2
-  # Local cache
-  shared_preferences: ^0.5.3+4
   fl_chart:
   color_pick:
-  flutter_datetime_picker:  
+  flutter_datetime_picker:
+  hive:
+  hive_flutter:
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
@@ -46,7 +43,8 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  mockito: ^4.1.0
+  hive_generator:
+  build_runner:
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
