@@ -5,16 +5,18 @@ import 'package:meta/meta.dart';
 class TransactionModel extends Transaction {
   TransactionModel({
     @required String description,
-    @required double amount,
+    @required int amount,
     @required String category,
-    @required Color color,
+    @required String colorHex,
     @required DateTime dateTime,
+    int key,
   }) : super(
           description: description,
           amount: amount,
           category: category,
-          color: color,
+          colorHex: colorHex,
           dateTime: dateTime,
+          key: key,
         );
   // factory TransactionModel.fromHiveBox(Transaction t) {
   //   return TransactionModel(

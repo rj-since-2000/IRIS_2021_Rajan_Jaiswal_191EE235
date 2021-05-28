@@ -10,19 +10,27 @@ class Transaction extends Equatable {
   @HiveField(0)
   final String description;
   @HiveField(1)
-  final double amount;
+  final int amount;
   @HiveField(2)
   final String category;
   @HiveField(3)
-  final Color color;
+  final String colorHex;
   @HiveField(4)
   final DateTime dateTime;
+  @HiveField(5)
+  final int key;
 
   Transaction({
     @required this.description,
     @required this.amount,
     @required this.category,
-    @required this.color,
+    @required this.colorHex,
     @required this.dateTime,
-  }) : super([description, amount, category, color, dateTime]);
+    this.key,
+  });
+
+  @override
+  // TODO: implement props
+  List<Object> get props =>
+      [description, amount, category, colorHex, dateTime, key];
 }

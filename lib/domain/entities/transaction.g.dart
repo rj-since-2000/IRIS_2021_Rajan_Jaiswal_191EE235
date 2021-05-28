@@ -18,17 +18,18 @@ class TransactionAdapter extends TypeAdapter<Transaction> {
     };
     return Transaction(
       description: fields[0] as String,
-      amount: fields[1] as double,
+      amount: fields[1] as int,
       category: fields[2] as String,
-      color: fields[3] as Color,
+      colorHex: fields[3] as String,
       dateTime: fields[4] as DateTime,
+      key: fields[5] as int,
     );
   }
 
   @override
   void write(BinaryWriter writer, Transaction obj) {
     writer
-      ..writeByte(5)
+      ..writeByte(6)
       ..writeByte(0)
       ..write(obj.description)
       ..writeByte(1)
@@ -36,9 +37,11 @@ class TransactionAdapter extends TypeAdapter<Transaction> {
       ..writeByte(2)
       ..write(obj.category)
       ..writeByte(3)
-      ..write(obj.color)
+      ..write(obj.colorHex)
       ..writeByte(4)
-      ..write(obj.dateTime);
+      ..write(obj.dateTime)
+      ..writeByte(5)
+      ..write(obj.key);
   }
 
   @override

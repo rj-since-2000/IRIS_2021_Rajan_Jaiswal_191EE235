@@ -42,4 +42,9 @@ class TransactionRepositoryImpl implements TransactionRepository {
       return Left(CacheFailure());
     }
   }
+
+  @override
+  Future<void> deleteTransaction(int key) async {
+    await localDataSource.deleteTransaction(key);
+  }
 }

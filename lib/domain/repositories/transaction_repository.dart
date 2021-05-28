@@ -7,4 +7,5 @@ abstract class TransactionRepository {
   Future<Either<Failure, List<Transaction>>> getAllTransactions();
   Future<Either<Failure, List<Transaction>>> getTransactionsBetween(
       DateTime fromDate, DateTime tillDate);
+  Future<void> deleteTransaction(int key);
 }
